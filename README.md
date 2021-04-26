@@ -53,14 +53,14 @@ Para ir rapidamente a las partes del codigo que debe modificar para resolver cad
 1. `Excercise 4.1`: Add a [submenu page](https://developer.wordpress.org/reference/functions/add_submenu_page/) to the menu **Tiny Plugin**.
 2. `Excercise 4.2`: Show a hello world in the previously added submenu when its page get opened.
 
-# Solucion
-Para entregar su solución, envienos el link a un repositorio en su cuenta personal de GitHub con la solución.
+# Entrega de la Solucion
+Para entregar su solución, envienos el link a un repositorio ubicado en su cuenta personal de GitHub con la solución.
 
 # Ayudas adicionales
 ## Shortcodes
-Parte principal de los ejercicios esta relacionado a un shortcode, un shortcode en WordPress es una forma modular de definir un componente de UI, aunque existen otros mecanismos, el shortcode es simple y practico.
+Varios ejercicios estan relacionados a un shortcode, un shortcode en WordPress es una forma modular de definir un componente de UI, aunque existen otros mecanismos, el shortcode es simple y practico.
 
-Para ver lo que un shortcode genera entre a un post o pagina de su sitio y agregue el codigo del shortcode, en nuestro caso:
+Para ver lo que un shortcode genera ingrese a un post o pagina de su sitio y agregue el codigo del shortcode, en nuestro caso:
 
 ```
 [dummy-shortcode]
@@ -80,7 +80,7 @@ function shortcode_callback( $atts, $content, $shortcode_tag )
 }
 ```
 
-La función `shortcode_atts()` se usa para definir valores por defectos a los atributos que recibe el shortcode, asi, sin un usuario no especifica un atributo le asignamos un valor por defecto.
+La función `shortcode_atts()` se usa para definir valores por defectos a los atributos que recibe el shortcode, asi, si un usuario no especifica un atributo le asignamos un valor por defecto.
 
 ```php
 function shortcode_callback( $atts, $content, $shortcode_tag )
