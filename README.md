@@ -50,9 +50,8 @@ Para ir rapidamente a las partes del codigo que debe modificar para resolver cad
 1. `Excercise 3.1`: Import **tiny-extra-script.js** in the footer (not the head).
 
 ## Caracteristicas Nuevas (Panel de administracion)
-1. `Excercise 4.1`: Add a new attribute to the shortcode named **subtitle** and let it have the 'Subtitulo por defecto' default value.
-2. `Excercise 4.2`: Add [submenu page](https://developer.wordpress.org/reference/functions/add_submenu_page/) to the menu **Tiny Plugin**.
-2. `Excercise 4.3`: Show a hello world in the previously added submenu when its page get opened.
+1. `Excercise 4.1`: Add [submenu page](https://developer.wordpress.org/reference/functions/add_submenu_page/) to the menu **Tiny Plugin**.
+2. `Excercise 4.2`: Show a hello world in the previously added submenu when its page get opened.
 
 # Solucion
 Para entregar su solución, envienos el link a un repositorio en su cuenta personal de GitHub con la solución.

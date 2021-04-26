@@ -65,7 +65,7 @@ class Tiny_Plugin_Admin {
 			'dashicons-video-alt2'
 		);
 
-		// Excercise 4.2: Add [submenu page](https://developer.wordpress.org/reference/functions/add_submenu_page/) to the menu **Tiny Plugin**.
+		// Excercise 4.1: Add [submenu page](https://developer.wordpress.org/reference/functions/add_submenu_page/) to the menu **Tiny Plugin**.
 	}
 
 	public function main_menu_content() {
@@ -77,7 +77,7 @@ class Tiny_Plugin_Admin {
 		<?php
 	}
 
-	// Excercise 4.3: Show a hello world in the previously added submenu when its page get opened.
+	// Excercise 4.2: Show a hello world in the previously added submenu when its page get opened.
 
 	/**
 	 * Register the stylesheets for the admin area.
