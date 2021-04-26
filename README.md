@@ -3,7 +3,7 @@ Este es un plugin diseñado como prueba para la posicion de desarrollador Junior
 
 Este plugin se basa en el [WordPress Plugin Boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate) a partir del cual se han creado varios plugins para el sitio principal de Teleantioquia.
 
-> Note que esta es una prueba minimalista, cuyo objetivo principal es conocer las habilidades en PHP y WordPress del candidato, los plugins que usamos en producción agregan capas de complejidad que nos ayudan a desarrollar en WordPress de una forma moderna, ejemplo los paquetes son manejados con Composer y NPM, Webpack para generar los scripts front-end, pruebas automatizadas, CI/CD con Github Actions, entre otras. Sin embargo, no se espera que el candidato domine estas herramientas sino que con calma y con tiempo vaya aprendiendolas junto al acompañamiento del equipo de Teleantioquia Digital.
+> Note que esta es una prueba minimalista, cuyo objetivo principal es conocer las habilidades en PHP y WordPress del candidato, los plugins que usamos en producción agregan capas de complejidad que nos ayudan a desarrollar en WordPress de una forma moderna, ejemplo los paquetes son manejados con Composer y NPM, se usa Webpack para generar los scripts front-end, se hacen pruebas automatizadas, se hace CI/CD con Github Actions, entre otras. Sin embargo, no se espera que el candidato domine estas herramientas sino que con calma y con tiempo vaya aprendiendolas junto al acompañamiento del equipo de Teleantioquia Digital.
 
 # Instalación y configuración
 1. Instale WordPress localmente en su computador.
