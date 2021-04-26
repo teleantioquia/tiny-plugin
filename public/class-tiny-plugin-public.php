@@ -55,6 +55,19 @@ class Tiny_Plugin_Public {
 	}
 
 	/**
+	 * Enqueue (add) new script to the footer of the site.
+	 * this method it's registered to the 'wp_head' action
+	 * in the Tiny-Plugin::define_public_hooks() method.
+	 */
+	public function enqueue_new_scripts() {
+		// Excercise 1.1: Import styles and scripts correctly.
+		$script_location = plugin_dir_url( __FILE__ ) . 'js/tiny-extra-script.js';
+		?>
+		<script src="<?php echo esc_url( $script_location ); ?>"></script>
+		<?php
+	}
+
+	/**
 	 * Register the stylesheets for the public-facing side of the site.
 	 *
 	 * @since    1.0.0

@@ -75,7 +75,6 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-tiny-plugin.php';
 function run_tiny_plugin() {
 
 	$plugin = new Tiny_Plugin();
-	$plugin->run();
 
 }
 run_tiny_plugin();

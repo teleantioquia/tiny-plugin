@@ -54,6 +54,31 @@ class Tiny_Plugin_Admin {
 
 	}
 
+	public function register_menu()
+	{
+		add_menu_page(
+			'Tiny Plugin',
+			'Tiny Plugin',
+			'manage_options',
+			'tiny-plugin',
+			array( $this, 'main_menu_content' ),
+			'dashicons-video-alt2'
+		);
+
+		// Excercise 4.2: Add [submenu page](https://developer.wordpress.org/reference/functions/add_submenu_page/) to the menu **Tiny Plugin**.
+	}
+
+	public function main_menu_content() {
+		?>
+		<div class="wrap">
+			<h1>Tiny Plugin</h1>
+			<div>Bienvenido a tiny plugin.</div>
+		</div>
+		<?php
+	}
+
+	// Excercise 4.3: Show a hello world in the previously added submenu when its page get opened.
+
 	/**
 	 * Register the stylesheets for the admin area.
 	 *

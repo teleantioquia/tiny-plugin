@@ -30,16 +30,6 @@
 class Tiny_Plugin {
 
 	/**
-	 * The loader that's responsible for maintaining and registering all hooks that power
-	 * the plugin.
-	 *
-	 * @since    1.0.0
-	 * @access   protected
-	 * @var      Tiny_Plugin_Loader    $loader    Maintains and registers all hooks for the plugin.
-	 */
-	protected $loader;
-
-	/**
 	 * The unique identifier of this plugin.
 	 *
 	 * @since    1.0.0
@@ -100,16 +90,16 @@ class Tiny_Plugin {
 	private function load_dependencies() {
 
 		/**
-		 * The class responsible for orchestrating the actions and filters of the
-		 * core plugin.
+		 * The class responsible for defining internationalization functionality
+		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-tiny-plugin-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-tiny-plugin-i18n.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-tiny-plugin-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-tiny-plugin-shortcode.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
@@ -121,8 +111,6 @@ class Tiny_Plugin {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-tiny-plugin-public.php';
-
-		$this->loader = new Tiny_Plugin_Loader();
 
 	}
 
@@ -139,7 +127,7 @@ class Tiny_Plugin {
 
 		$plugin_i18n = new Tiny_Plugin_i18n();
 
-		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
+		add_action( 'plugins_loaded', array( $plugin_i18n, 'load_plugin_textdomain' ) );
 
 	}
 
@@ -154,9 +142,11 @@ class Tiny_Plugin {
 
 		$plugin_admin = new Tiny_Plugin_Admin( $this->get_plugin_name(), $this->get_version() );
 
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
-		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
+		add_action( 'admin_enqueue_scripts', array( $plugin_admin, 'enqueue_styles' ) );
+		add_action( 'admin_enqueue_scripts', array( $plugin_admin, 'enqueue_scripts' ) );
 
+		// Register main menu.
+		add_action( 'admin_menu', array( $plugin_admin, 'register_menu' ) );
 	}
 
 	/**
@@ -169,19 +159,21 @@ class Tiny_Plugin {
 	private function define_public_hooks() {
 
 		$plugin_public = new Tiny_Plugin_Public( $this->get_plugin_name(), $this->get_version() );
+		$shortcode     = new Tiny_Plugin_Shortcode();
 
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
-		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
+		// Hint: the second argument is a callback, however when we want to pass
+		// the method of a instance object as callback we have to use the array notation
+		// this is something PHP specific.
+		// array( $instanceObj, 'instance_method_name' );
 
-	}
+		// Excercise 1.2: Why do we use the `ob_start()`/`ob_get_clean()` pair of functions in the shortcode callback?.
+		add_action( 'init', array( $shortcode, 'register_shortcode' ) );
 
-	/**
-	 * Run the loader to execute all of the hooks with WordPress.
-	 *
-	 * @since    1.0.0
-	 */
-	public function run() {
-		$this->loader->run();
+		// Excercise 1.1: Import styles and scripts correctly.
+		add_action( 'wp_head', array( $plugin_public, 'enqueue_new_scripts' ) );
+		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $plugin_public, 'enqueue_scripts' ) );
+
 	}
 
 	/**

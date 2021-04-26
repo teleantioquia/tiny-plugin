@@ -29,4 +29,6 @@
 	 * practising this, we should strive to set a better example in our own work.
 	 */
 
+	// Excercise 2.6: Show a window alert when the previously added button gets clicked.
+
 })( jQuery );
