@@ -54,6 +54,8 @@ Para ir rapidamente a las partes del codigo que debe modificar para resolver cad
 2. `Excercise 4.2`: Add [submenu page](https://developer.wordpress.org/reference/functions/add_submenu_page/) to the menu **Tiny Plugin**.
 2. `Excercise 4.3`: Show a hello world in the previously added submenu when its page get opened.
 
+# Solucion
+Para entregar su solución, envienos el link a un repositorio en su cuenta personal de GitHub con la solución.
 
 # Ayudas adicionales
 ## Shortcodes
