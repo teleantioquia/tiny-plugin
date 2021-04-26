@@ -91,7 +91,7 @@ class Tiny_Plugin_Shortcode
     ob_start();
 		?>
     <h2><?php echo esc_html( $shortcode_args['title'] ); ?></h2>
-    <!-- Excercise 2.2: Show the **subtitle** attribute below the title wrapped in an h3. -->
+    <!-- Excercise 2.2: Show the **subtitle** attribute below the title and wrap it in an h3. -->
 
     <ul>
       <?php foreach ($names as $name => $data) : ?>

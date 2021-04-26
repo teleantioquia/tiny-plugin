@@ -40,7 +40,7 @@ Para ir rapidamente a las partes del codigo que debe modificar para resolver cad
 
 ## Caracteristicas Nuevas (Shortcode)
 1. `Excercise 2.1`: Add a new attribute to the shortcode named **subtitle** and let it have the 'Subtitulo por defecto' default value.
-2. `Excercise 2.2`: Show the **subtitle** attribute below the title wrapped in an h3.
+2. `Excercise 2.2`: Show the **subtitle** attribute below the title and wrap it in an h3.
 3. `Excercise 2.3`: Show the **age** and **city** related to each **name**.
 4. `Excercise 2.4`: Add styles to the shortcode outputed HTML to change a bit the appeareance.
 5. `Excercise 2.5`: Add a button to the shortcode output HTML.
