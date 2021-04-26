@@ -3,7 +3,15 @@ Este es un plugin diseñado como prueba para la posicion de desarrollador Junior
 
 Este plugin se basa en el [WordPress Plugin Boilerplate](https://github.com/DevinVinson/WordPress-Plugin-Boilerplate) a partir del cual se han creado varios plugins para el sitio principal de Teleantioquia.
 
-> Note, que esta es una prueba minimalista, cuyo objetivo principal es conocer las habilidades en PHP y WordPress del candidato, los plugins que usamos en producción agregan capas de complejidad que nos ayudan a desarrollar en WordPress de una forma moderna, ejemplo los paquetes son manejados con Composer y NPM, Webpack para generar los scripts front-end, pruebas automatizadas, CI/CD con Github Actions, entre otras. Sin embargo, no se espera que el candidato domine estas herramientas sino que con calma y con tiempo vaya aprendiendolas junto al acompañamiento del equipo de Teleantioquia Digital.
+> Note que esta es una prueba minimalista, cuyo objetivo principal es conocer las habilidades en PHP y WordPress del candidato, los plugins que usamos en producción agregan capas de complejidad que nos ayudan a desarrollar en WordPress de una forma moderna, ejemplo los paquetes son manejados con Composer y NPM, Webpack para generar los scripts front-end, pruebas automatizadas, CI/CD con Github Actions, entre otras. Sin embargo, no se espera que el candidato domine estas herramientas sino que con calma y con tiempo vaya aprendiendolas junto al acompañamiento del equipo de Teleantioquia Digital.
+
+# Instalación y configuración
+1. Instale WordPress localmente en su computador.
+2. Clone este repositorio en la carpeta `wp-content/plugins/` para que WordPress lo reconozca como un plugin.
+3. Active el plugin en el panel de administración.
+4. Agregue el shortcode `[dummy-shortcode]` a alguna pagina o post para que pueda ir viendo los cambios que le realice.
+
+Observe que cuando se activa el plugin aparece el menu **Tiny Plugin** en el panel de administración de WordPress.
 
 # Sobre la estructura de carpetas
 El punto de entrada del plugin es el archivo `tiny-plugin.php`, el archivo `uninstall.php` es llamado por WordPress automaticamente cuando el plugin se desinstala.
@@ -20,11 +28,11 @@ Se puede ignorar la carpeta `languages/` ya que no se necesitara para ningun eje
 
 # Ejercicios
 
-Los ejercicios se dividen en tres categorias, se permite al candidato investigar en cualquier foro de internet, mirar la documentacion o buscar en Google como solucionar los problemas especificos.
+Los ejercicios se dividen en 4 categorias, se permite al candidato investigar en cualquier foro de internet, mirar la documentacion o buscar en Google como solucionar los problemas especificos.
 
 Note, si el codigo sigue los [WordPress Coding Standards](https://make.wordpress.org/core/handbook/best-practices/coding-standards/) se dara puntos adicionales. (Sin embargo esto no baja la calificacion).
 
-Para ir rapidamente a las partes del codigo que debe modificar para resolver cada ejercicio busque en su editor de codigo las partes donde salga el nombre del ejercicio, ejemplo para el primer ejercicio de buenas practicas, busque todos los archivos que tengan el comentario **Excercise 1.1**
+Para ir rapidamente a las partes del codigo que debe modificar para resolver cada ejercicio busque en su editor de codigo las partes donde salga el nombre del ejercicio, ejemplo para el primer ejercicio de buenas practicas, busque todos los archivos que tengan el comentario `Excercise 1.1`.
 
 ## Buenas Practicas
 1. `Excercise 1.1`: Import styles and scripts correctly.
